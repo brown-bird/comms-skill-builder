@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Skills Builder</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 30px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .header p { font-size: 1.1em; opacity: 0.95; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .tab-btn {
+            flex: 1; min-width: 150px; padding: 15px 25px; background: white;
+            border: none; border-radius: 10px; font-size: 1em; font-weight: 600;
+            cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .tab-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+        .tab-btn.active { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+        .content-section { display: none; background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .content-section.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .skill-card {
+            background: #f8f9fa; border-left: 4px solid #667eea; padding: 20px;
+            margin-bottom: 20px; border-radius: 8px; transition: all 0.3s;
+        }
+        .skill-card:hover { background: #e9ecef; transform: translateX(5px); }
+        .skill-card h3 { color: #667eea; margin-bottom: 10px; font-size: 1.3em; }
+        .skill-card p { color: #495057; line-height: 1.6; margin-bottom: 10px; }
+        .example-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-top: 10px; border-radius: 5px; }
+        .example-box strong { color: #856404; }
+        .practice-section { background: #d1ecf1; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        .practice-section h3 { color: #0c5460; margin-bottom: 15px; }
+        .practice-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .practice-item:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.1); transform: scale(1.02); }
+        .practice-item input[type="checkbox"] {
+            margin-top: 3px;
+            min-width: 20px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .practice-item span {
+            flex: 1;
+            color: #495057;
+            line-height: 1.5;
+            font-size: 1em;
+        }
+        .quick-tips { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); padding: 25px; border-radius: 10px; color: #004085; margin-top: 20px; }
+        .quick-tips h3 { margin-bottom: 15px; }
+        .quick-tips ul { list-style-position: inside; line-height: 2; }
+        .scenario-card { background: white; border: 2px solid #dee2e6; padding: 20px; margin: 15px 0; border-radius: 10px; }
+        .scenario-card h4 { color: #495057; margin-bottom: 10px; }
+        .response-option { background: #f8f9fa; padding: 10px; margin: 8px 0; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
+        .response-option:hover { background: #e9ecef; }
+        .progress-tracker { background: white; padding: 20px; border-radius: 10px; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .progress-bar { height: 30px; background: #e9ecef; border-radius: 15px; overflow: hidden; margin-top: 10px; }
+        .progress-fill {
+            height: 100%; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.5s; display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗣️ Communication Skills Builder</h1>
+            <p>Master professional and family communication</p>
+        </div>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('work')">Work/Professional</button>
+            <button class="tab-btn" onclick="showTab('family')">Family</button>
+            <button class="tab-btn" onclick="showTab('practice')">Practice Scenarios</button>
+        </div>
+        <div id="work" class="content-section active">
+            <h2 style="color: #667eea; margin-bottom: 20px;">Professional Communication Skills</h2>
+            <div class="skill-card">
+                <h3>1. Active Listening in Meetings</h3>
+                <p>Give full attention without planning your response while others speak. Show engagement through body language and brief acknowledgments.</p>
+                <div class="example-box"><strong>Try this:</strong> "Just to make sure I understand correctly, you're saying [summarize their point]. Is that right?"</div>
+            </div>
+            <div class="skill-card">
+                <h3>2. Clear, Direct Requests</h3>
+                <p>Replace vague hints with specific asks. State what you need, by when, and why it matters.</p>
+                <div class="example-box"><strong>Instead of:</strong> "It would be nice if someone could look at this..."<br><strong>Say:</strong> "Sarah, could you review section 3 by Thursday? I need your input before the client call."</div>
+            </div>
+            <div class="skill-card">
+                <h3>3. Constructive Feedback</h3>
+                <p>Use the "observation + impact + request" framework. Focus on specific behaviors, not character.</p>
+                <div class="example-box"><strong>Framework:</strong> "When [specific behavior], it [impact]. Could you [specific request]?"<br><strong>Example:</strong> "When reports come in late, it delays our client updates. Could you send them by 3pm on Fridays?"</div>
+            </div>
+            <div class="skill-card">
+                <h3>4. Managing Difficult Conversations</h3>
+                <p>Prepare key points, choose the right time/place, and stay calm. Focus on solutions, not blame.</p>
+                <div class="example-box"><strong>Opening:</strong> "I'd like to discuss [topic]. Is now a good time, or should we schedule 15 minutes later today?"</div>
+            </div>
+            <div class="quick-tips">
+                <h3>⚡ Quick Professional Tips</h3>
+                <ul>
+                    <li>Pause 2 seconds before responding in tense conversations</li>
+                    <li>Use "and" instead of "but" to build on ideas, not dismiss them</li>
+                    <li>Match your communication style to your audience (formal/casual)</li>
+                    <li>Follow up important verbal conversations with brief email summaries</li>
+                    <li>Ask "What questions do you have?" instead of "Any questions?"</li>
+                </ul>
+            </div>
+        </div>
+        <div id="family" class="content-section">
+            <h2 style="color: #667eea; margin-bottom: 20px;">Family Communication Skills</h2>
+            <div class="skill-card">
+                <h3>1. Emotional Validation</h3>
+                <p>Acknowledge feelings before problem-solving. People need to feel heard before they can hear you.</p>
+                <div class="example-box"><strong>Try this:</strong> "That sounds really frustrating. I can see why you'd feel that way." (Then pause and listen more)</div>
+            </div>
+            <div class="skill-card">
+                <h3>2. "I" Statements vs "You" Statements</h3>
+                <p>Express your feelings and needs without blaming. This reduces defensiveness.</p>
+                <div class="example-box"><strong>Instead of:</strong> "You never help around the house!"<br><strong>Say:</strong> "I feel overwhelmed when I'm handling all the chores. I need more support."</div>
+            </div>
+            <div class="skill-card">
+                <h3>3. Timing and Tone</h3>
+                <p>Bring up sensitive topics when both parties are calm, not during conflict or when someone's stressed.</p>
+                <div class="example-box"><strong>Opening:</strong> "I'd like to talk about something important. Is this a good time, or would after dinner work better?"</div>
+            </div>
+            <div class="skill-card">
+                <h3>4. Repair After Conflict</h3>
+                <p>Take responsibility for your part, even if it's just 5%. Apologize specifically, not generally.</p>
+                <div class="example-box"><strong>Instead of:</strong> "Sorry if I upset you."<br><strong>Say:</strong> "I'm sorry I raised my voice. That wasn't fair to you."</div>
+            </div>
+            <div class="skill-card">
+                <h3>5. Regular Check-ins</h3>
+                <p>Don't wait for problems. Create routine moments to connect and discuss how things are going.</p>
+                <div class="example-box"><strong>Try this:</strong> Weekly 20-minute conversations about: What went well? What was hard? What do we need from each other?</div>
+            </div>
+            <div class="quick-tips">
+                <h3>⚡ Quick Family Tips</h3>
+                <ul>
+                    <li>Put phones away during important conversations</li>
+                    <li>Use the "24-hour rule" - wait before responding to hurtful messages</li>
+                    <li>Ask permission before giving advice: "Do you want my thoughts or just to vent?"</li>
+                    <li>Notice and mention what family members do well, not just problems</li>
+                    <li>Set boundaries with love: "I care about you AND I need..."</li>
+                </ul>
+            </div>
+        </div>
+        <div id="practice" class="content-section">
+            <h2 style="color: #667eea; margin-bottom: 20px;">Practice Scenarios</h2>
+            <p style="margin-bottom: 20px;">Click on scenarios to reveal effective responses and learn through examples.</p>
+            <div class="scenario-card">
+                <h4>📊 Work Scenario: Your colleague keeps interrupting you in meetings</h4>
+                <div class="response-option" onclick="this.style.background='#d4edda'; this.innerHTML='<strong>✓ Good approach:</strong> After the meeting: &quot;Hey, can we chat for a minute? I noticed I got cut off a few times today. I want to make sure my ideas get heard too. Can we work on letting each other finish?&quot;'">Click to see an effective response →</div>
+            </div>
+            <div class="scenario-card">
+                <h4>👨‍👩‍👧 Family Scenario: Your parent keeps giving unsolicited advice</h4>
+                <div class="response-option" onclick="this.style.background='#d4edda'; this.innerHTML='<strong>✓ Good approach:</strong> &quot;I know you care and want to help. Right now, I really just need someone to listen without advice. Can we try that?&quot; (Then if it continues) &quot;I appreciate your thoughts. I'll let you know if I need suggestions.&quot;'">Click to see an effective response →</div>
+            </div>
+            <div class="scenario-card">
+                <h4>💼 Work Scenario: You need to tell your boss a project will be late</h4>
+                <div class="response-option" onclick="this.style.background='#d4edda'; this.innerHTML='<strong>✓ Good approach:</strong> &quot;I need to update you on the timeline. We have hit [specific obstacle]. I can deliver by [new date] if we [solution], or by [alternative date] with current resources. What works best given our priorities?&quot;'">Click to see an effective response →</div>
+            </div>
+            <div class="scenario-card">
+                <h4>👪 Family Scenario: Your sibling borrowed something and damaged it</h4>
+                <div class="response-option" onclick="this.style.background='#d4edda'; this.innerHTML='<strong>✓ Good approach:</strong> &quot;Hey, I noticed [item] got damaged. I am disappointed because it was important to me. I would like you to replace it or contribute to repairs. Can we figure this out together?&quot;'">Click to see an effective response →</div>
+            </div>
+            <div class="practice-section">
+                <h3>📝 Weekly Communication Challenges</h3>
+                <p style="margin-bottom: 15px;">Check off each challenge as you complete it:</p>
+                
+                <div class="practice-item">
+                    <input type="checkbox" onchange="updateProgress()" id="challenge1">
+                    <span>Use an "I" statement instead of a "you" accusation</span>
+                </div>
+                
+                <div class="practice-item">
+                    <input type="checkbox" onchange="updateProgress()" id="challenge2">
+                    <span>Actively listen and summarize what someone said before responding</span>
+                </div>
+                
+                <div class="practice-item">
+                    <input type="checkbox" onchange="updateProgress()" id="challenge3">
+                    <span>Give specific positive feedback to a colleague or family member</span>
+                </div>
+                
+                <div class="practice-item">
+                    <input type="checkbox" onchange="updateProgress()" id="challenge4">
+                    <span>Validate someone's emotions before offering solutions</span>
+                </div>
+                
+                <div class="practice-item">
+                    <input type="checkbox" onchange="updateProgress()" id="challenge5">
+                    <span>Make a clear, direct request instead of hinting</span>
+                </div>
+                
+                <div class="practice-item">
+                    <input type="checkbox" onchange="updateProgress()" id="challenge6">
+                    <span>Pause for 2+ seconds before responding in a tense moment</span>
+                </div>
+                
+                <div class="practice-item">
+                    <input type="checkbox" onchange="updateProgress()" id="challenge7">
+                    <span>Ask for permission before giving advice</span>
+                </div>
+                
+                <div class="progress-tracker">
+                    <h4>Your Progress This Week</h4>
+                    <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width: 0%;">0%</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        function updateProgress() {
+            const total = document.querySelectorAll('.practice-item input[type="checkbox"]').length;
+            const checked = document.querySelectorAll('.practice-item input[type="checkbox"]:checked').length;
+            const percentage = Math.round((checked / total) * 100);
+            const fill = document.getElementById('progressFill');
+            fill.style.width = percentage + '%';
+            fill.textContent = percentage + '%';
+        }
+    </script>
+</body>
+</html>
