@@ -10,7 +10,7 @@
   --color-surface:   #ffffff;
   --color-border:    #e2e6ea;
   --color-text:      #212529;
-  --color-text-muted:#6c757d;
+  --color-text-muted:#5a6370;
   --color-accent:    #3d5a80;
   --color-accent-light: #e8eef4;
   --color-tag-bg:    #edf2ff;
@@ -38,6 +38,26 @@ a {
   text-decoration: none;
 }
 a:hover { text-decoration: underline; }
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 100;
+}
+.skip-link:focus { top: 16px; }
 
 /* --- Layout ----------------------------------------------- */
 .site-header {
@@ -171,6 +191,13 @@ main {
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.playbook-callout:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(61,90,128,0.1);
+  text-decoration: none;
 }
 
 .playbook-callout h3 {
@@ -295,6 +322,15 @@ main {
   padding: 4px 12px;
 }
 
+.context-tag a {
+  color: inherit;
+  text-decoration: none;
+}
+.context-tag a:hover,
+.context-tag a:focus-visible {
+  text-decoration: underline;
+}
+
 /* Playbook placeholder */
 .playbook-placeholder {
   background: var(--color-surface);
@@ -335,8 +371,7 @@ main {
 .playbook-section p,
 .playbook-section li {
   font-size: 0.9375rem;
-  color: var(--color-text-muted);
-  font-style: italic;
+  color: var(--color-text);
 }
 
 .playbook-section ul {
@@ -374,7 +409,8 @@ main {
 
   .site-header-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
 
-  .site-nav a:first-child { margin-left: 0; }
+  .site-nav { display: flex; gap: 16px; }
+  .site-nav a { margin-left: 0; }
 
   .playbook-callout { flex-direction: column; }
 
