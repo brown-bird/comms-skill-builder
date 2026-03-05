@@ -90,4 +90,4 @@ This is a personal project. If you have suggestions for situations, principles, 
 
 *Built as a living reference — updated as situations teach new lessons.*
 
-<!-- Last updated: 2026-03-03 -->
+<!-- Last updated: 2026-03-05 -->
