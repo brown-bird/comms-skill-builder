@@ -166,17 +166,11 @@ main {
 }
 
 .principle-card h2 {
-  font-size: 1.0625rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: 8px;
+  line-height: 1.45;
   letter-spacing: -0.01em;
-}
-
-.principle-card p {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  line-height: 1.55;
 }
 
 /* --- Playbook Callout ------------------------------------- */
@@ -248,16 +242,10 @@ main {
 }
 
 .principle-header h1 {
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 12px;
-}
-
-.principle-header .tagline {
-  font-size: 1.0625rem;
-  color: var(--color-text-muted);
-  max-width: 600px;
+  line-height: 1.25;
 }
 
 .content-section {
@@ -414,5 +402,5 @@ main {
 
   .playbook-callout { flex-direction: column; }
 
-  .principle-header h1 { font-size: 1.5rem; }
+  .principle-header h1 { font-size: 1.375rem; }
 }
