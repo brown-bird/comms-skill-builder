@@ -147,7 +147,9 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: 24px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: border-color 0.15s, box-shadow 0.15s;
   color: inherit;
 }
@@ -158,11 +160,17 @@ main {
   text-decoration: none;
 }
 
+.principle-card-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
 .principle-card-number {
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 600;
   color: var(--color-text-muted);
-  margin-bottom: 8px;
+  flex-shrink: 0;
 }
 
 .principle-card h2 {
@@ -171,6 +179,23 @@ main {
   color: var(--color-text);
   line-height: 1.45;
   letter-spacing: -0.01em;
+}
+
+.principle-card-category {
+  padding-top: 20px;
+}
+
+.principle-card-category-pill {
+  display: inline-block;
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  border: 1px solid var(--color-border);
+  border-radius: 99px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 2px 10px;
+  white-space: nowrap;
 }
 
 /* --- Playbook Callout ------------------------------------- */
