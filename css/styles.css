@@ -185,7 +185,8 @@ main {
   padding-top: 20px;
 }
 
-.principle-card-category-pill {
+.principle-card-category-pill,
+.principle-category-pill {
   display: inline-block;
   background: var(--color-tag-bg);
   color: var(--color-tag-text);
@@ -271,6 +272,10 @@ main {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.25;
+}
+
+.principle-header .principle-category {
+  margin-top: 14px;
 }
 
 .content-section {
