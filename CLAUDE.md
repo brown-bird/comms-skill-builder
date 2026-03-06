@@ -21,7 +21,7 @@ The site has two content layers that must be kept manually in sync:
 Follow `new-scenario-checklist.md`:
 
 1. Copy `playbook/_template.html` to `playbook/[situation-slug].html`
-2. Fill in all six sections: Situation, Applicable Principles, What to Avoid, Recommended Approach, Example Language, Follow-Up
+2. Fill in all six sections: Situation, Principles, Anti-patterns, Applicable Principles, Example Language, Follow-Up
 3. Update the `<title>` tag to `[Situation Title] — Communications Skill Builder`
 4. For each principle tagged, open its page in `principles/` and manually add a link in the "Playbook entries" section
 
