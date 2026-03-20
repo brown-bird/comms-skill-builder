@@ -1,5 +1,5 @@
 /* ============================================================
-   Communications Skill Builder — Bauhaus Theme
+   Communications Skill Builder — Bauhaus Theme (Mobile-First)
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap');
 
@@ -59,12 +59,12 @@ a:hover { color: var(--red); }
 }
 .skip-link:focus { top: 16px; }
 
-/* --- Layout ----------------------------------------------- */
+/* --- Layout (mobile base) --------------------------------- */
 .site-header {
   background: var(--black);
   border-bottom: 3px solid var(--black);
-  padding: 0 24px;
-  height: 52px;
+  padding: 12px 16px;
+  height: auto;
   display: flex;
   align-items: center;
 }
@@ -80,7 +80,7 @@ a:hover { color: var(--red); }
 
 .site-title {
   font-family: var(--font-display);
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   letter-spacing: 0.15em;
   color: var(--yellow);
 }
@@ -93,7 +93,7 @@ a:hover { color: var(--red); }
   font-size: 0.9375rem;
   letter-spacing: 0.12em;
   color: rgba(255,255,255,0.5);
-  margin-left: 28px;
+  margin-left: 20px;
   transition: color 0.15s;
 }
 .site-nav a:hover { color: var(--yellow); text-decoration: none; }
@@ -104,15 +104,15 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
-  padding: 56px 24px;
+  padding: 32px 16px;
 }
 
 .site-footer {
   border-top: 3px solid var(--black);
-  padding: 28px 24px;
+  padding: 20px 16px;
   text-align: center;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.875rem;
   letter-spacing: 0.2em;
   color: var(--yellow);
   background: var(--black);
@@ -120,23 +120,23 @@ main {
 
 /* --- Home: Hero ------------------------------------------- */
 .hero {
-  margin-bottom: 56px;
-  padding-bottom: 48px;
+  margin-bottom: 32px;
+  padding-bottom: 28px;
   border-bottom: 3px solid var(--black);
 }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(52px, 8vw, 108px);
+  font-size: clamp(2.5rem, 10vw, 6.75rem);
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 0.92;
   color: var(--black);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .hero p {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 300;
   font-style: italic;
   color: var(--mid);
@@ -156,7 +156,7 @@ main {
 
 .principle-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 0;
   border: 3px solid var(--black);
 }
@@ -164,7 +164,6 @@ main {
 /* Cycle card accent bars: red, blue, yellow */
 .principle-card {
   background: var(--white);
-  border-right: 3px solid var(--black);
   border-bottom: 3px solid var(--black);
   padding: 0;
   display: flex;
@@ -174,6 +173,11 @@ main {
   transition: background 0.12s;
   position: relative;
   overflow: hidden;
+  min-height: 44px;
+}
+
+.principle-card:last-child {
+  border-bottom: 0;
 }
 
 .principle-card:hover {
@@ -186,7 +190,7 @@ main {
   content: '';
   position: absolute;
   left: 0; top: 0; bottom: 0;
-  width: 10px;
+  width: 8px;
   background: var(--red);
 }
 
@@ -194,10 +198,10 @@ main {
 .principle-card:nth-child(3n+3)::before { background: var(--yellow); }
 
 .principle-card-heading {
-  padding: 16px 20px 8px 24px;
+  padding: 14px 16px 6px 20px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .principle-card-number {
@@ -209,7 +213,7 @@ main {
 
 .principle-card h2 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 1.05;
@@ -217,7 +221,7 @@ main {
 }
 
 .principle-card-category {
-  padding: 12px 20px 18px 24px;
+  padding: 8px 16px 14px 20px;
 }
 
 .principle-card-category-pill,
@@ -228,7 +232,7 @@ main {
   border: 2px solid var(--black);
   border-radius: 0;
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.12em;
   padding: 2px 8px;
   white-space: nowrap;
@@ -236,14 +240,14 @@ main {
 
 /* --- Playbook Callout ------------------------------------- */
 .playbook-callout {
-  margin-top: 48px;
+  margin-top: 32px;
   background: var(--blue);
   border: 3px solid var(--black);
-  padding: 28px 32px;
+  padding: 20px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
   color: #fff;
   transition: filter 0.12s;
@@ -255,14 +259,14 @@ main {
 
 .playbook-callout h3 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   letter-spacing: 0.1em;
   margin-bottom: 4px;
   color: #fff;
 }
 
 .playbook-callout p {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 300;
   font-style: italic;
   color: rgba(255,255,255,0.75);
@@ -273,7 +277,7 @@ main {
   background: transparent;
   color: #fff;
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   padding: 4px 12px;
   border: 2px solid rgba(255,255,255,0.6);
   letter-spacing: 0.12em;
@@ -283,54 +287,75 @@ main {
 /* --- Principle Page --------------------------------------- */
 .breadcrumb {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   letter-spacing: 0.15em;
   color: var(--mid);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .breadcrumb a { color: var(--mid); }
 .breadcrumb a:hover { color: var(--red); }
-.breadcrumb span { margin: 0 8px; }
+.breadcrumb span { margin: 0 6px; }
 
 .principle-header {
-  margin-bottom: 48px;
-  padding-bottom: 40px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
   border-bottom: 3px solid var(--black);
 }
 
 .principle-header .principle-number {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--mid);
   letter-spacing: 0.2em;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .principle-header h1 {
   font-family: var(--font-display);
-  font-size: clamp(44px, 7vw, 80px);
+  font-size: clamp(2rem, 8vw, 5rem);
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 0.95;
 }
 
 .principle-header .principle-category {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
+/* --- Habit Phrase (principle page hero) -------------------- */
+.habit-phrase {
+  background: var(--yellow);
+  border: 3px solid var(--black);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.habit-phrase p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+}
+
+.habit-phrase strong {
+  font-weight: 700;
+}
+
+/* --- Content Section (principle pages) -------------------- */
 .content-section {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .content-section h2 {
   font-family: var(--font-display);
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.18em;
   color: var(--black);
-  margin-bottom: 16px;
-  padding-bottom: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
   border-bottom: 3px solid var(--black);
 }
 
@@ -339,7 +364,6 @@ main {
   font-weight: 300;
   color: var(--mid);
   margin-bottom: 12px;
-  max-width: 680px;
   line-height: 1.75;
 }
 
@@ -348,7 +372,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 680px;
 }
 
 .content-section ul li {
@@ -361,7 +384,7 @@ main {
 }
 
 .content-section ul li::before {
-  content: "—";
+  content: "\2014";
   position: absolute;
   left: 0;
   color: var(--red);
@@ -382,9 +405,12 @@ main {
   border: 2px solid var(--black);
   border-radius: 0;
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.1em;
-  padding: 4px 10px;
+  padding: 6px 10px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .context-tag a {
@@ -401,7 +427,7 @@ main {
 .playbook-placeholder {
   background: var(--gray);
   border: 3px solid var(--black);
-  padding: 32px 24px;
+  padding: 24px 16px;
   text-align: center;
   color: var(--mid);
   font-family: var(--font-display);
@@ -409,29 +435,134 @@ main {
   letter-spacing: 0.12em;
 }
 
+/* --- Playbook Page Header --------------------------------- */
+.playbook-page-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+  border-bottom: 3px solid var(--black);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+/* --- Recipe Card (playbook entries) ----------------------- */
+.recipe-card {
+  border: 3px solid var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card-situation {
+  padding: 12px 16px;
+  border-bottom: 3px solid var(--black);
+  background: var(--gray);
+}
+
+.recipe-card-situation p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.5;
+}
+
+.recipe-card-language {
+  padding: 16px;
+  border-bottom: 3px solid var(--black);
+}
+
+.recipe-card-language p {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--black);
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.recipe-card-language p:last-child {
+  margin-bottom: 0;
+}
+
+.recipe-card-actions {
+  padding: 16px;
+  border-bottom: 3px solid var(--black);
+}
+
+.recipe-card-actions ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 0;
+}
+
+.recipe-card-actions ul li {
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding-left: 20px;
+  position: relative;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+.recipe-card-actions ul li::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.recipe-card h3 {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.recipe-card h3.dont-heading {
+  margin-top: 20px;
+  color: var(--red);
+}
+
+.recipe-card-principles {
+  padding: 12px 16px;
+  background: var(--gray);
+}
+
+.principle-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 /* --- Playbook Template ------------------------------------ */
 .template-notice {
   background: var(--yellow);
   border: 3px solid var(--black);
-  padding: 12px 20px;
+  padding: 12px 16px;
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--black);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
+/* Legacy playbook section (kept for backward compat) */
 .playbook-section {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .playbook-section h2 {
   font-family: var(--font-display);
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.18em;
   color: var(--blue);
-  margin-bottom: 16px;
-  padding-bottom: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
   border-bottom: 3px solid var(--black);
 }
 
@@ -457,34 +588,169 @@ main {
 }
 
 .playbook-section ul li::before {
-  content: "—";
+  content: "\2014";
   position: absolute;
   left: 0;
   color: var(--red);
   font-weight: 700;
 }
 
-.principle-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+/* --- Tablet+ (640px) -------------------------------------- */
+@media (min-width: 640px) {
+  .site-header {
+    padding: 0 24px;
+    height: 52px;
+  }
+
+  .site-title {
+    font-size: 1.375rem;
+  }
+
+  .site-nav a {
+    margin-left: 28px;
+  }
+
+  main {
+    padding: 48px 24px;
+  }
+
+  .site-footer {
+    padding: 28px 24px;
+    font-size: 1rem;
+  }
+
+  .hero {
+    margin-bottom: 48px;
+    padding-bottom: 40px;
+  }
+
+  .principle-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  .principle-card {
+    border-right: 3px solid var(--black);
+  }
+
+  .principle-card:last-child {
+    border-bottom: 3px solid var(--black);
+  }
+
+  .principle-card-heading {
+    padding: 16px 20px 8px 24px;
+    gap: 6px;
+  }
+
+  .principle-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .principle-card-category {
+    padding: 12px 20px 18px 24px;
+  }
+
+  .principle-card-category-pill,
+  .principle-category-pill {
+    font-size: 0.75rem;
+  }
+
+  .playbook-callout {
+    margin-top: 48px;
+    padding: 28px 32px;
+  }
+
+  .playbook-callout h3 {
+    font-size: 1.5rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.875rem;
+    margin-bottom: 32px;
+  }
+
+  .principle-header {
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+  }
+
+  .habit-phrase {
+    padding: 24px 28px;
+    margin-bottom: 32px;
+  }
+
+  .habit-phrase p {
+    font-size: 1.125rem;
+  }
+
+  .content-section {
+    margin-bottom: 32px;
+  }
+
+  .content-section h2 {
+    font-size: 1.375rem;
+  }
+
+  .context-tag {
+    font-size: 0.75rem;
+    min-height: auto;
+  }
+
+  /* Recipe card: 2-column layout */
+  .recipe-card {
+    display: grid;
+    grid-template-areas:
+      "situation situation"
+      "language  actions"
+      "principles principles";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recipe-card-situation {
+    grid-area: situation;
+    padding: 16px 24px;
+  }
+
+  .recipe-card-language {
+    grid-area: language;
+    border-bottom: 0;
+    border-right: 3px solid var(--black);
+    padding: 20px 24px;
+  }
+
+  .recipe-card-actions {
+    grid-area: actions;
+    border-bottom: 0;
+    padding: 20px 24px;
+  }
+
+  .recipe-card-principles {
+    grid-area: principles;
+    border-top: 3px solid var(--black);
+    padding: 16px 24px;
+  }
 }
 
-/* --- Responsive ------------------------------------------- */
-@media (max-width: 600px) {
-  main { padding: 40px 16px; }
+/* --- Desktop (900px+) ------------------------------------- */
+@media (min-width: 900px) {
+  main {
+    padding: 56px 24px;
+  }
 
-  .hero h1 { font-size: 3rem; }
+  .hero {
+    margin-bottom: 56px;
+    padding-bottom: 48px;
+  }
 
-  .principle-grid { grid-template-columns: 1fr; }
+  .principle-header {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+  }
 
-  .site-header { height: auto; padding: 12px 24px; }
-  .site-header-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .habit-phrase {
+    padding: 28px 32px;
+  }
 
-  .site-nav { display: flex; gap: 20px; }
-  .site-nav a { margin-left: 0; }
-
-  .playbook-callout { flex-direction: column; }
-
-  .principle-header h1 { font-size: 2.75rem; }
+  .habit-phrase p {
+    font-size: 1.25rem;
+  }
 }

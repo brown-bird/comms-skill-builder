@@ -8,6 +8,8 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="site-header">
     <div class="site-header-inner">
       <div class="site-title"><a href="../index.html">Communications Skill Builder</a></div>
@@ -18,71 +20,57 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="template-notice">
       This is a template. Duplicate this file and replace all placeholder text in brackets.
     </div>
 
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="../playbook/">Playbook</a>
       <span>›</span>
       [Situation Title]
     </nav>
 
-    <!-- PLAYBOOK SECTION 1: SITUATION -->
-    <div class="playbook-section">
-      <h2>Situation</h2>
-      <p>[Describe what's happening and why it's tricky. 2–4 sentences. Be specific about the interpersonal dynamic at play.]</p>
-    </div>
+    <h1 class="playbook-page-title">[Situation Title]</h1>
 
-    <!-- PLAYBOOK SECTION 2: EXAMPLE LANGUAGE -->
-    <div class="playbook-section">
-      <h2>Example Language</h2>
-      <p>[Opening or framing phrase to adapt. Use quotation marks. Keep it natural, not scripted.]</p>
-      <p>[Alternative phrasing for a different tone or context.]</p>
-    </div>
+    <div class="recipe-card">
+      <!-- SITUATION: 1 sentence describing what's happening -->
+      <div class="recipe-card-situation">
+        <p>[One sentence describing the situation and why it's tricky.]</p>
+      </div>
 
-    <!-- PLAYBOOK SECTION 3: PRINCIPLES -->
-    <div class="playbook-section">
-      <h2>Principles</h2>
-      <ul>
-        <li>[Step 1]</li>
-        <li>[Step 2]</li>
-        <li>[Step 3]</li>
-        <li>[Step 4]</li>
-      </ul>
-    </div>
+      <!-- SAY THIS: Example language to use in the moment -->
+      <div class="recipe-card-language">
+        <h3>Say this</h3>
+        <p>"[Opening or framing phrase to adapt. Keep it natural.]"</p>
+        <p>"[Alternative phrasing for a different tone or context.]"</p>
+      </div>
 
-    <!-- PLAYBOOK SECTION 4: ANTI-PATTERNS -->
-    <div class="playbook-section">
-      <h2>Anti-patterns</h2>
-      <ul>
-        <li>[Common misstep and why it backfires]</li>
-        <li>[Common misstep and why it backfires]</li>
-        <li>[Common misstep and why it backfires]</li>
-      </ul>
-    </div>
+      <!-- STEPS + DON'T: Action items and anti-patterns -->
+      <div class="recipe-card-actions">
+        <h3>Steps</h3>
+        <ul>
+          <li>[Step 1]</li>
+          <li>[Step 2]</li>
+          <li>[Step 3]</li>
+        </ul>
 
-    <!-- PLAYBOOK SECTION 5: APPLICABLE PRINCIPLES -->
-    <div class="playbook-section">
-      <h2>Applicable Principles</h2>
-      <div class="principle-tags">
-        <!-- Add a context-tag for each relevant principle -->
-        <span class="context-tag"><a href="../principles/empathy-tone.html">Empathy &amp; Tone</a></span>
-        <span class="context-tag"><a href="../principles/clarity-brevity.html">Clarity &amp; Brevity</a></span>
-        <span class="context-tag"><a href="../principles/conflict-resolution.html">Conflict Resolution</a></span>
-        <span class="context-tag"><a href="../principles/situational-awareness.html">Situational Awareness</a></span>
-        <span class="context-tag"><a href="../principles/principled-negotiation.html">Principled Negotiation</a></span>
-        <span class="context-tag"><a href="../principles/influencing-without-authority.html">Influencing Without Authority</a></span>
+        <h3 class="dont-heading">Don't</h3>
+        <ul>
+          <li>[Common misstep — one line, no explanation]</li>
+          <li>[Common misstep — one line, no explanation]</li>
+        </ul>
+      </div>
+
+      <!-- PRINCIPLE TAGS: 1-3 relevant principles -->
+      <div class="recipe-card-principles">
+        <div class="principle-tags">
+          <!-- Keep only the relevant ones, delete the rest -->
+          <span class="context-tag"><a href="../principles/empathy-tone.html">Empathy &amp; Tone</a></span>
+          <span class="context-tag"><a href="../principles/clarity-brevity.html">Clarity &amp; Brevity</a></span>
+        </div>
       </div>
     </div>
-
-    <!-- PLAYBOOK SECTION 6: FOLLOW-UP -->
-    <div class="playbook-section">
-      <h2>Follow-Up</h2>
-      <p>[How to close the loop or sustain the outcome after the conversation. What does success look like going forward?]</p>
-    </div>
-
   </main>
 
   <footer class="site-footer">
