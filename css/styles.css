@@ -1,20 +1,22 @@
 /* ============================================================
-   Communications Skill Builder — Swiss / International Theme
+   Communications Skill Builder — Bauhaus Theme
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap');
 
 /* --- Reset & Base ----------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --red:        #E8001A;
-  --black:      #000000;
-  --white:      #FAFAFA;
-  --gray:       #555555;
-  --light-gray: #aaaaaa;
-  --rule:       1px solid #000;
+  --red:    #E03E2D;
+  --blue:   #1E52A0;
+  --yellow: #F6C90E;
+  --black:  #000000;
+  --white:  #FFFFFF;
+  --gray:   #F2F2F2;
+  --mid:    #666666;
 
-  --font-sans: 'Barlow', sans-serif;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-sans:    'Barlow', sans-serif;
   --radius: 0px;
   --max-width: 900px;
 }
@@ -35,10 +37,10 @@ a {
   color: var(--black);
   text-decoration: none;
 }
-a:hover { color: var(--red); text-decoration: none; }
+a:hover { color: var(--red); }
 
 :focus-visible {
-  outline: 2px solid var(--red);
+  outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
 
@@ -46,21 +48,21 @@ a:hover { color: var(--red); text-decoration: none; }
   position: absolute;
   top: -100%;
   left: 16px;
-  background: var(--red);
+  background: var(--blue);
   color: #fff;
   padding: 8px 16px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
   z-index: 200;
+  border: 3px solid var(--black);
 }
 .skip-link:focus { top: 16px; }
 
 /* --- Layout ----------------------------------------------- */
 .site-header {
   background: var(--black);
-  border-bottom: var(--rule);
+  border-bottom: 3px solid var(--black);
   padding: 0 24px;
   height: 52px;
   display: flex;
@@ -77,26 +79,24 @@ a:hover { color: var(--red); text-decoration: none; }
 }
 
 .site-title {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  letter-spacing: 0.15em;
+  color: var(--yellow);
 }
 
 .site-title a { color: inherit; }
-.site-title a:hover { color: var(--red); text-decoration: none; }
+.site-title a:hover { color: #fff; text-decoration: none; }
 
 .site-nav a {
-  font-size: 0.625rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  letter-spacing: 0.12em;
   color: rgba(255,255,255,0.5);
   margin-left: 28px;
   transition: color 0.15s;
 }
-.site-nav a:hover { color: var(--red); text-decoration: none; }
+.site-nav a:hover { color: var(--yellow); text-decoration: none; }
 .site-nav a.active { color: #fff; }
 
 main {
@@ -108,14 +108,13 @@ main {
 }
 
 .site-footer {
-  border-top: var(--rule);
-  padding: 24px;
+  border-top: 3px solid var(--black);
+  padding: 28px 24px;
   text-align: center;
-  font-size: 0.625rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: var(--yellow);
   background: var(--black);
 }
 
@@ -123,107 +122,102 @@ main {
 .hero {
   margin-bottom: 56px;
   padding-bottom: 48px;
-  border-bottom: var(--rule);
+  border-bottom: 3px solid var(--black);
 }
 
 .hero h1 {
-  font-size: clamp(48px, 7vw, 96px);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
-  line-height: 0.9;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8vw, 108px);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 0.92;
   color: var(--black);
   margin-bottom: 20px;
 }
 
-/* Red rule above heading */
-.hero::before {
-  content: '';
-  display: block;
-  width: 64px;
-  height: 3px;
-  background: var(--red);
-  margin-bottom: 24px;
-}
-
 .hero p {
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 300;
   font-style: italic;
-  color: var(--gray);
+  color: var(--mid);
   max-width: 520px;
   line-height: 1.65;
 }
 
 /* --- Principle Grid --------------------------------------- */
 .section-label {
-  font-size: 0.625rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--red);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  letter-spacing: 0.2em;
+  color: var(--black);
   margin-bottom: 16px;
+  padding-top: 0;
 }
 
 .principle-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 0;
-  border-top: var(--rule);
-  border-left: var(--rule);
+  border: 3px solid var(--black);
 }
 
+/* Cycle card accent bars: red, blue, yellow */
 .principle-card {
   background: var(--white);
-  border-right: var(--rule);
-  border-bottom: var(--rule);
+  border-right: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: inherit;
-  transition: background 0.15s;
+  transition: background 0.12s;
   position: relative;
-}
-
-.principle-card::before {
-  content: '';
-  display: block;
-  height: 4px;
-  background: var(--red);
+  overflow: hidden;
 }
 
 .principle-card:hover {
-  background: #f0f0f0;
+  background: var(--gray);
   text-decoration: none;
 }
 
+/* Coloured left bar — cycles red/blue/yellow via nth-child */
+.principle-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 10px;
+  background: var(--red);
+}
+
+.principle-card:nth-child(3n+2)::before { background: var(--blue); }
+.principle-card:nth-child(3n+3)::before { background: var(--yellow); }
+
 .principle-card-heading {
-  padding: 16px 20px 8px;
+  padding: 16px 20px 8px 24px;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
 .principle-card-number {
-  font-size: 0.5625rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--red);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--mid);
 }
 
 .principle-card h2 {
-  font-size: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.05;
   color: var(--black);
 }
 
 .principle-card-category {
-  padding: 12px 20px 18px;
+  padding: 12px 20px 18px 24px;
 }
 
 .principle-card-category-pill,
@@ -231,21 +225,20 @@ main {
   display: inline-block;
   background: transparent;
   color: var(--black);
-  border: 1.5px solid var(--black);
+  border: 2px solid var(--black);
   border-radius: 0;
-  font-size: 0.5625rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 3px 8px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  padding: 2px 8px;
   white-space: nowrap;
 }
 
 /* --- Playbook Callout ------------------------------------- */
 .playbook-callout {
   margin-top: 48px;
-  background: var(--red);
-  border: none;
+  background: var(--blue);
+  border: 3px solid var(--black);
   padding: 28px 32px;
   display: flex;
   align-items: center;
@@ -253,25 +246,24 @@ main {
   gap: 16px;
   flex-wrap: wrap;
   color: #fff;
-  transition: background 0.15s;
+  transition: filter 0.12s;
 }
 .playbook-callout:hover {
-  background: #c7001a;
+  filter: brightness(0.9);
   text-decoration: none;
 }
 
 .playbook-callout h3 {
-  font-size: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
   margin-bottom: 4px;
   color: #fff;
 }
 
 .playbook-callout p {
-  font-size: 0.8125rem;
-  font-weight: 100;
+  font-size: 0.875rem;
+  font-weight: 300;
   font-style: italic;
   color: rgba(255,255,255,0.75);
 }
@@ -280,50 +272,47 @@ main {
   display: inline-block;
   background: transparent;
   color: #fff;
-  font-size: 0.5625rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border: 1.5px solid rgba(255,255,255,0.6);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  padding: 4px 12px;
+  border: 2px solid rgba(255,255,255,0.6);
+  letter-spacing: 0.12em;
   white-space: nowrap;
 }
 
 /* --- Principle Page --------------------------------------- */
 .breadcrumb {
-  font-size: 0.625rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--light-gray);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  color: var(--mid);
   margin-bottom: 40px;
 }
 
-.breadcrumb a { color: var(--light-gray); }
+.breadcrumb a { color: var(--mid); }
 .breadcrumb a:hover { color: var(--red); }
 .breadcrumb span { margin: 0 8px; }
 
 .principle-header {
   margin-bottom: 48px;
   padding-bottom: 40px;
-  border-bottom: var(--rule);
+  border-bottom: 3px solid var(--black);
 }
 
 .principle-header .principle-number {
-  font-size: 0.5625rem;
-  font-weight: 700;
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  color: var(--mid);
+  letter-spacing: 0.2em;
+  margin-bottom: 8px;
 }
 
 .principle-header h1 {
-  font-size: clamp(40px, 6vw, 80px);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
-  line-height: 0.92;
+  font-family: var(--font-display);
+  font-size: clamp(44px, 7vw, 80px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 0.95;
 }
 
 .principle-header .principle-category {
@@ -335,20 +324,20 @@ main {
 }
 
 .content-section h2 {
-  font-size: 0.625rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--red);
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: var(--rule);
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--black);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--black);
 }
 
 .content-section p {
   font-size: 0.9375rem;
-  font-weight: 400;
-  color: var(--gray);
+  font-weight: 300;
+  color: var(--mid);
   margin-bottom: 12px;
   max-width: 680px;
   line-height: 1.75;
@@ -364,10 +353,10 @@ main {
 
 .content-section ul li {
   font-size: 0.9375rem;
-  font-weight: 400;
+  font-weight: 300;
   padding-left: 20px;
   position: relative;
-  color: var(--gray);
+  color: var(--mid);
   line-height: 1.65;
 }
 
@@ -390,12 +379,11 @@ main {
 .context-tag {
   background: transparent;
   color: var(--black);
-  border: 1.5px solid var(--black);
+  border: 2px solid var(--black);
   border-radius: 0;
-  font-size: 0.625rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   padding: 4px 10px;
 }
 
@@ -411,25 +399,24 @@ main {
 
 /* Playbook placeholder */
 .playbook-placeholder {
-  background: var(--white);
-  border: 1px dashed var(--light-gray);
+  background: var(--gray);
+  border: 3px solid var(--black);
   padding: 32px 24px;
   text-align: center;
-  color: var(--light-gray);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  color: var(--mid);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
 }
 
 /* --- Playbook Template ------------------------------------ */
 .template-notice {
-  background: transparent;
-  border: 1.5px solid var(--light-gray);
+  background: var(--yellow);
+  border: 3px solid var(--black);
   padding: 12px 20px;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  color: var(--gray);
+  color: var(--black);
   margin-bottom: 40px;
 }
 
@@ -438,21 +425,21 @@ main {
 }
 
 .playbook-section h2 {
-  font-size: 0.625rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--red);
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: var(--rule);
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--blue);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--black);
 }
 
 .playbook-section p,
 .playbook-section li {
   font-size: 0.9375rem;
-  font-weight: 400;
-  color: var(--gray);
+  font-weight: 300;
+  color: var(--mid);
   line-height: 1.75;
 }
 
@@ -487,17 +474,17 @@ main {
 @media (max-width: 600px) {
   main { padding: 40px 16px; }
 
-  .hero h1 { font-size: 2.75rem; }
+  .hero h1 { font-size: 3rem; }
 
   .principle-grid { grid-template-columns: 1fr; }
 
   .site-header { height: auto; padding: 12px 24px; }
   .site-header-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
 
-  .site-nav { display: flex; gap: 16px; }
+  .site-nav { display: flex; gap: 20px; }
   .site-nav a { margin-left: 0; }
 
   .playbook-callout { flex-direction: column; }
 
-  .principle-header h1 { font-size: 2.5rem; }
+  .principle-header h1 { font-size: 2.75rem; }
 }
